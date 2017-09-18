@@ -22,4 +22,4 @@ clean:
 	rm -f $(BASE_NAME).ps $(BASE_NAME).dvi $(BASE_NAME).log \
 	      $(BASE_NAME).aux $(BASE_NAME).blg $(BASE_NAME).toc \
 	      missfont.log $(BASE_NAME).bbl $(BASE_NAME).pdf $(BASE_NAME).out \
-				$(BASE_NAME).nav $(BASE_NAME).snm
+				$(BASE_NAME).nav $(BASE_NAME).snm $(BASE_NAME).brf 
