@@ -6,19 +6,17 @@
 
 PDFLATEX = pdflatex
 BASE_NAME = slides-exemplo-beamer
+BIBTEX    = bibtex
 
 all: pdf
 pdf: $(BASE_NAME).pdf
 
 $(BASE_NAME).pdf: $(BASE_NAME).tex
 	$(PDFLATEX) $<
+	$(BIBTEX) $(BASE_NAME)
 	$(PDFLATEX) $<
 	$(PDFLATEX) $<
-#	bibtex $(BASE_NAME)
-#	makeindex $(BASE_NAME)
-#	$(PDFLATEX) $<
-#	$(PDFLATEX) $<
-
+	$(PDFLATEX) $<
 
 clean:
 	rm -f $(BASE_NAME).ps $(BASE_NAME).dvi $(BASE_NAME).log \
