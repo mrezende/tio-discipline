@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage[fixlanguage]{babelbib}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+
+\PassOptionsToPackage{hyphens}{url}\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true]{hyperref} % links coloridos
+
+\usepackage[all]{hypcap}                % soluciona o problema com o hyperref e capitulos
+\usepackage[square,sort,nonamebreak,comma]{natbib}  % citação bibliográfica alpha (alpha-ime.bst)
+\usepackage{setspace}                   % espaçamento flexível
+
+\graphicspath{{./images/}}
+
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{flushright} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{50pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{Software de código aberto e computação em nuvem contribuindo para a inovação}\\ % Title
+Como as startups se beneficiaram dos softwares de código aberto e computação em nuvem} % Subtitle
+
+\author{\textsc{Marcelo de Rezende Martins} % Author
+\\{\textit{IPT}}} % Institution
+
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+\begin{abstract}
+Uma das principais barreiras de entrada das pequenas e médias empresas é o custo inicial de investimento para adquirir licenças de software proprietário (servidor, sistema operacional, banco de dados) e acesso a hardware (servidores) \cite{Marston:2011176, Nagy:2010:OAO:1666420.1666457}. O advento da computação em nuvem e adoção de software de código aberto contribuiram para a revolução tecnológica que ocorre hoje.
+\end{abstract}
+
+\hspace*{3,6mm}\textit{Keywords:} open source, cloud computing, inovação % Keywords
+
+\vspace{30pt} % Some vertical space between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+
+\section*{Visão Pessoal}
+
+Muitas das apresentações do dia 26 de Setembro de 2017 falaram sobre computação em nuvem. Em uma das apresentações foi exibido o caso da IBM que mudou o seu principal modelo de negócio de venda de hardware para venda de soluções de software como serviço através da computação em nuvem \cite{ibm:17}. E uma das bases das soluções dos serviços de computação em nuvem da IBM é o uso de software de código aberto. Além de utilizar, a IBM também provê soluções, serviços e consultorias para empresas que adotaram softwares de código aberto \cite{Nagy:2010:OAO:1666420.1666457}.
+
+O advento da computação em nuvem e a crescente oferta de softwares de código aberto reduziu drasticamente o investimento inicial na aquisição de licenças de software como banco de dados, servidor, email ou aquisição de hardware como servidores às pequenas e médias empresas \cite{wheeler:15,Marston:2011176, Nagy:2010:OAO:1666420.1666457}. E a redução drástica desta barreira de entrada permitiu o surgimento de empresas como o Facebook, Youtube, Instagram, Twitter, por exemplo \cite{Marston:2011176}.
+
+O Facebook beneficiou-se principalmente dos softwares de código aberto. O site foi criado utilizando a combinação de softwares de código aberto mais comum, o \textbf{LAMP} \cite{agarwal:09}. LAMP é um acrônimo das primeiras letras da combinação dos softwares \textbf{L}inux, \textbf{A}pache, \textbf{P}HP e \textbf{M}ySQL que são utilizados no desenvolvimento de uma aplicação web \cite{wikilamp:17}. E esta arquitetura é mantida até hoje com as suas devidas alterações, pois, desde quando foi criado até os dias atuais, o Facebook tornou-se o site com o maior número de usuários ativos do mundo, atingindo a marca de 2 bilhões em junho de 2017 \cite{agarwal:09, wikiface:17}.
+
+A junção dos softwares de código aberto, computação em nuvem \cite{cockcroft:13}  e o aumento do acesso à internet banda larga \cite{doi:10.1162/daed.2010.139.2.119} permitiu que o Netflix fizesse uma inovação de ruptura, chamada de \textit{Big Bang Disruption} por Larry Downes e Paul Nunes \cite{downesnunes:13}, no mercado cinematográfico e de entretenimento mundial. Netflix tornou-se um dos maiores provedores de conteúdo cinematográfico no mundo, produzindo séries e filmes originais. Para prover todo este conteúdo através da internet para os seus 100 milhões de assinantes ao redor do mundo \cite{netflix:17}, Netflix criou uma plataforma que utiliza principalmente softwares de código aberto como \textit{Cassandra}, banco de dados distribuído e \textit{Hadoop}, biblioteca que permite o processamento distribuído de dados em larga escala \cite{cockcroft:13}. E o Netflix migrou toda a sua plataforma para a infra-estrutura como serviço de computação em nuvem da Amazon. Todo o conteúdo e processamento de dados estão na nuvem. Segundo Yury Izrailevsky, vice-presidente do Netflix, o custo de transmissão de conteúdo na nuvem tornou-se uma fração comparada ao custo de transmissão a partir de um data center. Segundo ele, isto deve-se principalmente à elasticidade da computação em nuvem, que permite criar instâncias de servidores de diferentes tipos e tamanhos conforme a demanda \cite{izrailevsky:16}.
+
+Além do Facebook e Netflix, o Google é um grande usuário de softwares de código aberto e um dos maiores incentivadores e patrocinadores também. Grandes empresas estão se beneficiando dos softwares de código aberto. E empresas como Netflix e Airbnb que utilizam toda a infra-estrutura como serviço da Amazon beneficiam-se da computação em nuvem. Atualmente, qualquer empresa e indivíduo tem a sua disposição uma gama enorme de soluções de código aberto e  servidores com enorme poder computacional a poucos cliques de distância. O TensorFlow é um exemplo de software de inteligência artificial de código aberto criado e mantido pelo Google, que permite o reconhecimento de imagens e fala, que está à disposição de qualquer empresa ou indivíduo que queira usar. O serviço de infra-estrutura na nuvem da Amazon, o AWS, que provê servidores de 0,004 dólares por hora, totalizando 2 dólares por mês ou servidores com enorme poder computacional de 8 dólares a hora, totalizando 6000 dólares por mês, é um exemplo de computação em nuvem disponível a qualquer um também. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\singlespacing   % espaçamento simples
+\bibliographystyle{alpha-ime}% citação bibliográfica alpha
+\bibliography{references}  % associado ao arquivo: 'bibliografia.bib'
+
+\end{document}
