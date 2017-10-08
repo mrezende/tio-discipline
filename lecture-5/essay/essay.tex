@@ -1,0 +1,143 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage[fixlanguage]{babelbib}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+
+\PassOptionsToPackage{hyphens}{url}\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true]{hyperref} % links coloridos
+
+\usepackage[all]{hypcap}                % soluciona o problema com o hyperref e capitulos
+\usepackage[square,sort,nonamebreak,comma]{natbib}  % citação bibliográfica alpha (alpha-ime.bst)
+\usepackage{setspace}                   % espaçamento flexível
+
+\graphicspath{{./images/}}
+
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{flushright} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{50pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{O maior perigo da inteligência artificial: O viés cognitivo}\\ % Title
+Distorção de julgamento é comum aos seres humanos e, por consequência, é comum também nos algoritmos de reconhecimento de padrões} % Subtitle
+
+\author{\textsc{Marcelo de Rezende Martins} % Author
+\\{\textit{IPT}}} % Institution
+
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+\begin{abstract}
+Um viés cognitivo (ou tendência cognitiva) é um padrão de distorção de julgamento que ocorre em situações particulares, levando à distorção perceptual, julgamento pouco acurado, interpretação ilógica, ou o que é amplamente chamado de irracionalidade \cite{wikiviescognitivo:17}.
+\end{abstract}
+
+\hspace*{3,6mm}\textit{Keywords:} inteligência artificial, viés cognitivo % Keywords
+
+\vspace{30pt} % Some vertical space between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+
+\section*{Visão Pessoal}
+
+Na última apresentação do dia 01 de Outubro comentou-se sobre a inteligência artificial. Houve uma tentativa prever quais são as consequências e possíveis implicações da inteligência artificial na humanidade num futuro bem remoto e apocalíptico. Todos os comentários foram feitos com base no livro \textit{Life 3.0: Being Human in the Age of Artificial Intelligence} do \textit{Max Tegmark}. Foi uma boa apresentação, porém faltou mencionar quais são os problemas reais e atuais que a humanidade está enfrentando com todas estas ferramentas de recomendação, algoritmos de reconhecimento de padrão e computadores que são capazes de aprender sozinhos.
+
+Há muitas empresas interessadas e que estão investindo em inteligência artificial. A IBM, por exemplo, está investindo bastante no seu produto IBM Watson, que mostrou-se capaz de responder perguntas e respostas ganhando o Jeopardy \cite{wikiwatson:17}. Atualmente o Watson está sendo aprimorado pela IBM para ajudar médicos e hospitais na detecção de câncer nos pacientes \cite{watson:17}. Outro exemplo é o Deep Mind do Google \cite{deepmind:17}. O Deep Mind ficou famoso por vencer uma partida de Go ganhando do campeão mundial em 2017 \cite{wikideepmind:17}. Este feito foi considerado por muitos maior que o da IBM em 1997, que criou um computador que venceu o Garry Kasparov, campeão mundial de xadrez. O número de possíveis jogadas no Go equivale a \num{e170}. Em comparação, a estimativa que os cientistas fazem do número de átomos no universo é de \num{e80}\cite{journals/nature/Gibney16}. 
+
+Watson e Deep Mind foram providos com um volume gigantesco de dados que foram essenciais para os julgamentos e decisões tomadas durante os torneios. Watson contém informações de enciclopédias, dicionários, artigos e livros literários \cite{wikiwatson:17}. Já o Deep Mind contém milhares de partidas de Go online registradas \cite{wikideepmind:17}. Enquanto estes computadores estiverem disputando torneio de \textit{Jeopardy} ou uma partida de \textit{Go}, não há tantos problemas para a humanidade se preocupar. Mas, a partir do momento, que a inteligência artificial é utilizada para diagnosticar pacientes ou prever a possibilidade de uma pessoa cometer um crime futuramente, abre-se um precedente muito grande \cite{knight:17}.
+
+Os estados do Michigan, New York e Florida estão utilizando o software COMPAS ( Correctional Offender Management Profiling for Alternative Sanctions) para analisar qual o risco de uma pessoa que cometeu um delito voltar a cometê-lo \cite{propublica:16}. E, no mínimo, 15 estados estão recorrendo a um software similar para prever qual a possibilidade de uma pessoa cometer um crime no futuro \cite{walker:13}. Caso o risco seja baixo, esta pessoa é liberada e punida apenas com trabalho e serviços sociais. O sistema prisional dos EUA é um dos maiores do mundo e a justificativa para o uso de softwares como o COMPAS é a ajuda na tomada de decisão feita pelos juízes. O software analisa todo o perfil e histórico do acusado e provê notas para categorias como isolamento social, abuso no uso de substâncias ilícitas, estabilidade, residência \cite{propublica:16}. Esta análise feita com base nos dados fornecidos ao software, permite um julgamento mais rápido e uma redução nos custos \cite{walker:13}.
+
+Porém, o sistema prisional americano é composto marjoritariamente por negros \cite{propublica:16}. Os julgamentos do sistema judiciário americano e a abordagem policial comumente são colocadas em xeque por grupos de direitos humanos e comunidade negra devido a truculência na abordagem e o alto índice de negros condenados pela justiça \cite{butler:17}. Um grupo de jornalistas do ProPublica obteve os dados da nota atribuída pelo software COMPAS a mais de 7000 pessoas presas na Flórida entre o período de 2013 e 2014 \cite{propublica:16}. Eles verificaram quantas destas pessoas foram presas nos próximos 2 anos também. A partir desta análise, eles constataram que o software comete erros na mesma proporção para brancos e negros. Mas há uma pequena diferença. O software aponta falsamente que um negro tem um alto risco de cometer um crime futuramente, apontando mais que o dobro de negros falsamente comparado com os brancos. Já no caso dos brancos, ele aponta erroneamente um branco com baixo risco de cometer um crime futuramente \cite{propublica:16}.
+
+O viés cognitivo é característico do ser humano, que tende a processar a informação de forma errônea. O viés cognitivo é um desafio para a inteligência artificial também. Caso os dados fornecidos ao algortimo de IA sejam enviesados, o julgamento feito por ele será enviesado também \cite{knight:17}. A luta pelos direitos iguais dos negros, mulheres e LGBT é constante e custou a vida de milhares de pessoas. E todas as empresas investidoras e incentivadoras da inteligência artificial devem ter a responsabilidade e consciência de que esta luta não seja em vã. É necessário garantir a transparência dos algoritmos e dados fornecidos aos softwares para evitar o favorecimento de um grupo em detrimento de outro.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\singlespacing   % espaçamento simples
+\bibliographystyle{alpha-ime}% citação bibliográfica alpha
+\bibliography{references}  % associado ao arquivo: 'bibliografia.bib'
+
+\end{document}
