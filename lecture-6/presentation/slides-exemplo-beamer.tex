@@ -1,0 +1,212 @@
+% slides-exemplo-beamer
+%
+% Sb Out  1 19:47:43 BRT 2011
+
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[table, usenames, svgnames, dvipsnames, hyperref={pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true}]{beamer}
+\usepackage{beamerthemeshadow}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{amssymb}
+\usepackage{array}
+
+\usepackage[fixlanguage]{babelbib}
+
+%\PassOptionsToPackage{hyphens}{url}\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true]{hyperref} % links coloridos
+
+%\usepackage[all]{hypcap}                % soluciona o problema com o hyperref e capitulos
+\usepackage[square,sort,nonamebreak,comma]{natbib}  % citação bibliográfica alpha (alpha-ime.bst)
+\usepackage{setspace}                   % espaçamento flexível
+
+\graphicspath{{./images/}}
+
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+%\usepackage{subfigure}
+%\usepackage{multicol}
+%\usepackage{colortbl}
+
+% ---------------------------------------------------------------------------- %
+% Definições beamer
+% ---------------------------------------------------------------------------- %
+\usetheme{Rochester}
+%\usetheme{Luebeck}
+\usecolortheme{rose}
+
+% Algumas definições para o layout
+\setbeamerfont{frametitle}{size=\normalsize}
+\setbeamerfont{title}{size=\normalsize}
+\beamertemplatenavigationsymbolsempty
+
+% Podem ser utilizadas imagens no background
+%\setbeamercolor{frametitle}{bg=black}
+%\usebackgroundtemplate{\includegraphics[height=\paperheight]{figuras/back.jpg}}
+
+% Os simbolos de navegacao nao sao necessarios
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+
+%\setbeamertemplate{footline}[page number]{}
+%\setbeamertemplate{footline}[text line]{ \hfill {\insertframenumber}}
+
+% Indice para cada seo (aparece antes de cada section)
+\AtBeginSection[]
+{
+	\begin{frame}<handout:0>
+		\frametitle{\textbf{Agenda}}
+		\footnotesize{ \tableofcontents[currentsection,hideothersubsections] }
+	\end{frame}
+}
+
+% ---------------------------------------------------------------------------- %
+% Declarações
+% ---------------------------------------------------------------------------- %
+\DeclareGraphicsExtensions{.pdf,.jpg,.png} % compilamos apenas com pdflatex
+
+
+
+% semitransparente
+\newcommand{\semitransp}[2][35]{\color{fg!#1}#2}
+
+% \definecolor{myred}{rgb}{0.8, 0.3, 0.3}
+\definecolor{myblue}{rgb}{0.2, 0.2, 0.70196}
+
+\usepackage{framed} % utilizado para codigo fonte
+\definecolor{shadecolor}{named}{LightGray}
+
+% ---------------------------------------------------------------------------- %
+% TÃ¯Â¿Â½tulo
+% ---------------------------------------------------------------------------- %
+\title{\textbf{Tecnologias de Informação e Organizações}}
+
+\author[Marcelo de Rezende Martins]{\scriptsize
+    Marcelo de Rezende Martins\\
+    rezende.martins@gmail.com
+}
+
+\subtitle{}
+
+\institute{\\[1.0mm]
+Instituto de Pesquisas Tecnológicas\\
+IPT}
+
+\date{{\tiny \today}}
+
+
+% ---------------------------------------------------------------------------- %
+\begin{document}
+% ---------------------------------------------------------------------------- %
+
+% ---------------------------------------------------------------------------- %
+% Primeira página: slide 0
+% ---------------------------------------------------------------------------- %
+
+{%\usebackgroundtemplate{}}
+\begin{frame}[plain]
+
+
+	\titlepage
+
+	\addtocounter{framenumber}{-1}
+\end{frame}
+}
+
+
+% ---------------------------------------------------------------------------- %
+% slide 1 >
+% ---------------------------------------------------------------------------- %
+%\setbeamertemplate{footline}{\hrule \MyLogo } %\hfill\includegraphics[height=1.2cm]{figuras/olho1.png}}
+%\setbeamertemplate{footline}{\hfill\includegraphics[height=1.2cm]{figuras/olho1.png}}
+\setbeamertemplate{navigation symbols}{\large {\insertframenumber}}
+
+% ---------------------------------------------------------------------------- %
+
+\begin{frame}[plain]
+\frametitle{}
+	\begin{block}{Artigos}
+		\begin{enumerate}
+			\item What Happens If Net Neutrality Goes Away? \cite{orcutt:17}
+			\item The relentless push to add connectivity to home gadgets is creating dangerous side effects that figure to get even worse. \cite{schneier:17}
+			\item The Best and Worst Internet Experience in the World \cite{larson:16}
+			\item How Ad Blockers Have Triggered an Arms Race on the Web \cite{arxiv:16}
+	\end{enumerate}
+	\end{block}
+\end{frame}
+
+% ---------------------------------------------------------------------------- %
+\begin{frame}
+\frametitle{\textbf{Agenda}}
+
+	\hspace*{+4.0em}
+	\footnotesize{ \tableofcontents }
+\end{frame}
+
+
+% ---------------------------------------------------------------------------- %
+\section{Visão Geral}
+% ---------------------------------------------------------------------------- %
+
+\begin{frame}
+\frametitle{Visão geral dos artigos}
+
+	\begin{enumerate}
+			\item Neutralidade da rede
+			\item Segurança na IoT
+			\item Censura na internet
+			\item Ad Blockers
+	\end{enumerate}
+
+\end{frame}
+
+
+% ---------------------------------------------------------------------------- %
+\section{Neutralidade da rede}
+% ---------------------------------------------------------------------------- %
+
+% ---------------------------------------------------------------------------- %
+\subsection{Inovação e neutralidade da rede}
+% ---------------------------------------------------------------------------- %
+
+\begin{frame}
+\frametitle{\textbf{Neutralidade da rede}}
+
+	É benéfico ou prejudicial à inovação? \cite{nordrum:17}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------- %
+\section{Privacidade}
+% ---------------------------------------------------------------------------- %
+
+\begin{frame}
+\frametitle{Paradoxo da privacidade}
+	O que é privacidade na internet? \cite{notetoself:17, eff:17, effdnt:17, doi:10.1080/1369118X.2013.777757, nprprivacy:17, propublicafb:16}
+\end{frame}
+
+% ---------------------------------------------------------------------------- %
+{%\usebackgroundtemplate{}}
+\begin{frame}[plain]
+
+	\titlepage
+
+	\addtocounter{framenumber}{-1}
+\end{frame}
+}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\begin{frame}[allowframebreaks]
+\frametitle{Referências}
+\singlespacing   % espaçamento simples
+\bibliographystyle{alpha-ime}% citação bibliográfica alpha
+\bibliography{references}  % associado ao arquivo: 'bibliografia.bib'
+\end{frame}
+
+\end{document}
