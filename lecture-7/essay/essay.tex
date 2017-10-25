@@ -1,0 +1,148 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage[fixlanguage]{babelbib}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+
+\PassOptionsToPackage{hyphens}{url}\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true]{hyperref} % links coloridos
+
+\usepackage[all]{hypcap}                % soluciona o problema com o hyperref e capitulos
+\usepackage[square,sort,nonamebreak,comma]{natbib}  % citação bibliográfica alpha (alpha-ime.bst)
+\usepackage{setspace}                   % espaçamento flexível
+
+\graphicspath{{./images/}}
+
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{flushright} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{50pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{Dados abertos é bom para a ciência e combate à corrupção}\\ % Title
+} % Subtitle
+
+\author{\textsc{Marcelo de Rezende Martins} % Author
+\\{\textit{IPT}}} % Institution
+
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+\begin{abstract}
+Dados abertos contribuem para o avanço na ciência e ajudam no combate à corrupção em governos de diversos países. \cite{perkel:16, BERTOT2010264}
+\end{abstract}
+
+\hspace*{3,6mm}\textit{Keywords:} inteligência artificial, viés cognitivo % Keywords
+
+\vspace{30pt} % Some vertical space between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+
+\section*{Visão Pessoal}
+
+O advento da internet transformou a sociedade industrial em sociedade da informação. O acesso livre a informação, com custo marginal "zero", revolucionou a forma como a população consome e produz informação \cite{benkler:06}. Mas esta revolução teve efeito em toda a sociedade, e alterou a forma como os pesquisadores e governos publicam e utilizam os dados também. 
+
+Os cientistas estão divulgando as suas bases de dados livremente através da internet, permitindo que outros cientistas tenham acesso simultâneo. Websites como o Github permitiu que não somente desenvolvedores, mas cientistas divulgassem seus projetos de forma aberta e livre, permitindo o acesso democrático as informações \cite{perkel:16}. O acesso a informação é um requisito à inovação e avanço da ciência.
+
+Além dos cientistas e pesquisadores, os governos nos últimos anos adotaram a transparência dos dados como um meio de combater a corrupção. Estas iniciativas começaram de forma tímida nos anos 90, mas ganharam força com a popularização da internet \cite{BERTOT2010264}. No Brasil, temos o portal transparência que exibe os salários de todos os servidores públicos federais, além do portal de compras, que permite qualquer empresa tenha acesso às licitações feitas pelo governo. O portal de compras do governo, permitiu que diversas empresas possam concorrer para oferecer serviços e produtos ao governo. Esta iniciativa reduziu custos combatendo a fixação de preços por empresas com o aumento da concorrência \cite{portaldados:16}.
+
+Infelizmente, a iniciativa de divulgação das informações e dados por parte do governo é tímida. A transparência dos dados ainda sofre com alguns setores do governo que não tem interesse na divulgação destas informações. Ou ainda há casos, como do Judiciário que é obrigado a divulgar os vencimentos de todos os servidores, mas estas informações são divulgadas num documento de difícil leitura e busca pelo cidadão. Basta acessar o site do Judiciário e verificar que os vencimentos são divulgados num arquivo de imagem (JPEG) que não permite a busca textual de forma rápida \cite{trtsp:17}.
+
+A divulgação dos dados pelo governo, permitirá que outras empresas e qualquer outro cidadão ajude no combate à corrupção ou, até mesmo, no planejamento da cidade. Por exemplo, em SP os dados do ônibus como localização, linha, trajeto e horário de chegada e saída estão abertos e disponíveis a qualquer um. Através destes dados, temos hoje disponíveis vários aplicativos para smartphones que permitem o usuário do transporte público verificar o tempo real dos ônibus e o status dos metrôs e trens de São Paulo \cite{sptrans:17}. Porém, não temos dados de crimes em SP de forma aberta ao cidadão, diferente do governo de Pernambuco e Rio Grande do Sul que divulgam estes dados. Estes dados são valiosos a pesquisadores de políticas públicas, direito e ciências sociais \cite{portaldados:16}.
+
+A transparência das informações é requisito para a democracia. Além disso, constatou-se que a divulgação das informações reduzem a corrupção. O acesso democrático aos dados é bom para a ciência e bom para a democracia. Devemos almejar o acesso livre e pleno as informações para que a ciência progrida e os governos atuem de forma mais transparente.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\singlespacing   % espaçamento simples
+\bibliographystyle{alpha-ime}% citação bibliográfica alpha
+\bibliography{references}  % associado ao arquivo: 'bibliografia.bib'
+
+\end{document}
