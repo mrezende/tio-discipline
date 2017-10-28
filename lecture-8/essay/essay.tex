@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+
+\usepackage{amsmath}
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage[fixlanguage]{babelbib}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+
+\PassOptionsToPackage{hyphens}{url}\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true]{hyperref} % links coloridos
+
+\usepackage[all]{hypcap}                % soluciona o problema com o hyperref e capitulos
+\usepackage[square,sort,nonamebreak,comma]{natbib}  % citação bibliográfica alpha (alpha-ime.bst)
+\usepackage{setspace}                   % espaçamento flexível
+
+\graphicspath{{./images/}}
+
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{flushright} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{50pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{P = NP? E qual a importância da teoria da computação?}\\ % Title
+} % Subtitle
+
+\author{\textsc{Marcelo de Rezende Martins} % Author
+\\{\textit{IPT}}} % Institution
+
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+\begin{abstract}
+A teoria da computação criada por Alan Turing, Alonzo Church and Kurt Godel mudou completamente a civilização. Porém, os cientistas ainda não conseguiram responder a uma pergunta: P = NP? \cite{Fortnow:2009:SPV:1562164.1562186}
+\end{abstract}
+
+\hspace*{3,6mm}\textit{Keywords:} inteligência artificial, viés cognitivo % Keywords
+
+\vspace{30pt} % Some vertical space between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+
+\section*{Visão Pessoal}
+
+Durante a aula do dia 25 de Outubro, teve um comentário sobre os problemas computacionais P e NP. Na teoria da computação criada por Alan Turing, Alonzo Church and Kurt Godel, definiu-se a classe de problemas computacionais P e NP. Um problema da classe P são problemas computacionais que existe um algoritmo que soluciona em tempo polinomial. Já os problemas da classe NP são problemas que a solução pode ser verificada em tempo polinomial. Dada uma solução para o problema NP, é possível verificar em tempo polinomial se a solução está correta ou não \cite{pf:17}.
+
+É fácil verificar que NP contém P. Quer dizer, os problemas de classe P são polinomialmente verificáveis. Mas será que todo problema NP está em P? Até o momento, ninguém encontrou um problema NP que não esteja em P, ou seja, um problema polinomialmente verificável para o qual \textit{não} exista um algoritmo polinomial. Inicialmente, podemos supor que P = NP. Porém, a maioria dos cientistas pensam ao contrário, eles acreditam que P $\neq$ NP \cite{pf:17}.
+
+Há diversos problemas NP que não foram encontrados algoritmos polinomiais para resolvê-lo. São problemas como o clique, mochila valiosa ou problema do caixeiro viajante. O problema do caixeiro viajante é bem conhecido, é um problema no qual um viajante deseja visitar N cidades (vértices) passando por cada cidade exatamente uma vez e retornando à cidade de origem, fazendo o menor caminho possível \cite{wikipedia:17}. A solução para este problema é de interesse de empresas de logística, transporte e coleta de lixo, por exemplo.
+
+Caso os cientistas provem que P = NP, isto teria um impacto enorme na internet e computação. P = NP implicaria que para todo problema NP existe um algoritmo polinomial. Algoritmo polinomial é facilmente executado. Isto teria consequências enormes para a criptografia utilizada hoje na internet. A criptografia hoje depende de problemas NP que não tem algoritmo polinomial. Caso tal agoritmo seja encontrado, não seria mais possível garantir o acesso e troca de informações através de uma rede segura. É impossível uma criptografia de chave pública caso P = NP \cite{Fortnow:2009:SPV:1562164.1562186}.
+
+Na verdade, o mundo seria completamente diferente segundo Scott Aaronson. Caso P = NP, não existiria mais problemas difíceis, todos os problemas seriam facilmente solucionáveis em tempo polinomial. Para Scott, bastaria ver uma sinfonia do Mozart para ser o Mozart, ou seguir o passo-a-passo para ser um Gauss ou ler sobre estratégias de investimento e tornar-se um Warren Buffet. Poderíamos criar programas para criar uma obra literária a partir dos livros clássicos \cite{nazaryan:13}. 
+
+A questão do P = NP continua em aberto e o instituto Clay Math oferece um prêmio para quem conseguir provar que P = NP ou P $\neq$ NP. E muito provalmente, os problemas NP não serão solucionáveis com computação quântica \cite{Fortnow:2009:SPV:1562164.1562186}. E segundo Mulmuley, a humanidade levará ainda 100 anos para encontrar uma solução \cite{Fortnow:2009:SPV:1562164.1562186}. É uma bela questão que une computação e matemática e que tem implicações em toda a humanidade.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\singlespacing   % espaçamento simples
+\bibliographystyle{alpha-ime}% citação bibliográfica alpha
+\bibliography{references}  % associado ao arquivo: 'bibliografia.bib'
+
+\end{document}
