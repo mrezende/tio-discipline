@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+
+\usepackage{amsmath}
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage[fixlanguage]{babelbib}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+
+\PassOptionsToPackage{hyphens}{url}\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true]{hyperref} % links coloridos
+
+\usepackage[all]{hypcap}                % soluciona o problema com o hyperref e capitulos
+\usepackage[square,sort,nonamebreak,comma]{natbib}  % citaÃ§Ã£o bibliogrÃ¡fica alpha (alpha-ime.bst)
+\usepackage{setspace}                   % espaÃ§amento flexÃ­vel
+
+\graphicspath{{./images/}}
+
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{flushright} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{50pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{Preparando novos programadores para a internet do futuro}\\ % Title
+} % Subtitle
+
+\author{\textsc{Marcelo de Rezende Martins} % Author
+\\{\textit{IPT}}} % Institution
+
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+\begin{abstract}
+A internet como conhecemos hoje irá mudar. Atualmente a maioria dos acessos à internet é feita por pessoas conectadas através de um dispositivo, seja um computador ou smartphone. A principal forma de comunicação é entre pessoas. Com o advento do IoT, teremos interações entre dispositivos. Ou seja, dispositivos comunicando-se entre si sem a interferência humana. O número de dispositivos conectados à  internet irá superar facilmente o número de pessoas. A internet do futuro irá trazer muitas oportunidades, porém é necessário prover a indústria com mão de obra especializada e uma das áreas mais exigidas será a de computação.
+\end{abstract}
+
+\hspace*{3,6mm}\textit{Keywords:} internet do futuro, educação, ciências da computação, novatos % Keywords
+
+\vspace{30pt} % Some vertical space between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+
+\section*{Visão Pessoal}
+
+
+A internet do futuro irá trazer muitas mudanças para a sociedade e economia e a principal delas é a forma de comunicação. Hoje a principal forma de comunicação feita na internet é pessoas comunicando-se com outras pessoas. Com o advento do IoT, as pessoas tornarão-se minoria e a principal forma de comunicação será entre dispositivos. Porém, o advento do IoT irá exigir uma mão de obra especializada e uma delas é pessoas capazes de programar para estes dispositivos. A internet do futuro irá corroborar para um problema recorrente mundialmente: a falta de programadores
+
+Para suprir esta demanda por novos programadores, é necessário rever o estado atual dos cursos de computação no Brasil e no mundo \cite{wikipedia:17}. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\singlespacing   % espaÃ§amento simples
+\bibliographystyle{alpha-ime}% citaÃ§Ã£o bibliogrÃ¡fica alpha
+\bibliography{references}  % associado ao arquivo: 'bibliografia.bib'
+
+\end{document}
