@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+
+\usepackage{amsmath}
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage[fixlanguage]{babelbib}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+
+\PassOptionsToPackage{hyphens}{url}\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true]{hyperref} % links coloridos
+
+\usepackage[all]{hypcap}                % soluciona o problema com o hyperref e capitulos
+\usepackage[square,sort,nonamebreak,comma]{natbib}  % citaÃƒÂ§ÃƒÂ£o bibliogrÃƒÂ¡fica alpha (alpha-ime.bst)
+\usepackage{setspace}                   % espaÃƒÂ§amento flexÃƒÂ­vel
+
+\graphicspath{{./images/}}
+
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{flushright} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{50pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{O homem viverá 1000 anos}\\ % Title
+} % Subtitle
+
+\author{\textsc{Marcelo de Rezende Martins} % Author
+\\{\textit{IPT}}} % Institution
+
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+\begin{abstract}
+Com o avanço da tecnologia e dos computadores, com a Lei de Moore, onde o poder de processamento computacional dobra a cada 18 meses, alguns cientistas apontam que caso você sobreviva os próximos 30 anos, é bem capaz que você sobreviverá por 1000 anos \cite{cox:17}.
+\end{abstract}
+
+\hspace*{3,6mm}\textit{Keywords:} crispr cas9, lei de moore, genética % Keywords
+
+\vspace{30pt} % Some vertical space between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+
+\section*{Visão Pessoal}
+
+
+Durante a apresentação do dia 22 de Novembro, comentou-se sobre a manipulação genética e o quanto a medicina avançou na edição de DNA. Comentou-se sobre a possibilidade de edição do DNA para que o ser humano seja resistente a alguns vírus. Este tipo de manipulação já é utilizada em plantas e sementes na agricultura. 
+
+Com o avanço do poder de processamento dos computadores e o avanço da genética, há uma grande chance do envelhecimento ser revertido. Com a lei de Moore ainda em vigor e o poder de processamento crescendo exponencialmente \cite{Denning:2016:ELC:3028256.2976758}, seremos capazes de produzir inteligências artificiais que farão diagnósticos mais precisos que o ser humano \cite{Kelly:2013:SMI:2588246}, será possível construir rôbos do tamanho do glóbulo vermelho, capazes de combater as células que causam o câncer, além de auxiliar o nosso sistema imunológico \cite{PANCHAPAKESAN2007293}. 
+
+Para o ser humano poder sobreviver 1000 anos, basta que sejamos capazes de tornar a pessoa mais jovem. Por exemplo, uma pessoa de 80 anos poderia ficar mais jovem com um corpo de 60 anos. Já uma pessoa de 60 anos, teria um corpo de 40 anos. E diminuindo a idade biológica do corpo, você aumenta a expectativa de vida. Então, a pessoa de 80 anos que tem um corpo de 60 anos, terá uma expectativa aumentada em 20 anos. E nos 20 anos subsequentes, a tecnologia continuará evoluindo, aumentando ainda mais a chance de novos tratamentos e métodos para reverter o envelhecimento serem encontrados. E caso ele consiga aumentar a expectativa de vida por mais 20 anos, a ciência terá mais um tempo para evoluir os métodos e tratamentos. E esta lógica continuará por anos e anos, levando o ser humano à "\textit{vida eterna}". Segundo alguns cientistas, já nos próximos 20 anos, teremos tratamentos para reverter o envelhecimento. Porém, estes tratamentos serão caríssimos e não estarão acessíveis a maioria da população. Porém, em 30 anos há uma margem mais segura para que a tecnologia esteja mais avançada e o custo do tratamento diminua, tornando-a acessível a uma parcela significativa das pessoas \cite{grey:05}.
+
+Segundo Aubrey de Grey, um pesquisador renomado no combate ao envelhecimento, há 7 pontos fundamentais \cite{sens:17} que geram o processo de envelhecimento. E segundo ele, há 50\% de chance da ciência encontrar métodos viáveis para reverter todos os 7 processos de envelhecimento nos próximos 25 anos \cite{grey:05}. Em 2015, um feito enorme foi alcançado por alguns cientistas, eles conseguiram aumentar a longevidade do rato em 25\% através de uma simples técnica de remover células "\textit{zoombies}", células que pararam de dividir e não estavam sendo renovadas pelo sistema imunológico \cite{callaway:16}. Atualmente, há duas empresas trabalhando para desenvolver tratamentos para remover este tipo de célula do ser humano, Unity Biotechnology e Oisin Biotechnology \cite{regalado:16}. Quanto mais empresas e laboratórios trabalharem para desenvolver este tipo de tratamento, maiores serão as chances de sucesso.
+
+Através da ciência, a sociedade evoluiu e hoje não é raro termos pessoas vivendo com mais de 100 anos. E o avanço tende a continuar devido ao crescimento exponencial do computador e o avanço da genética. Hoje somos capazes de editar o DNA através do método CRISPR-Cas9, por exemplo. E aparentemente num futuro próximo teremos a vida eterna, ou quase eterna.
+
+
+
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\singlespacing   % espacamento simples
+\bibliographystyle{alpha-ime}% citacao bibliografica alpha
+\bibliography{references}  % associado ao arquivo: 'bibliografia.bib'
+
+\end{document}
