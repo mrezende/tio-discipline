@@ -1,0 +1,385 @@
+% slides-exemplo-beamer
+%
+% Sb Out  1 19:47:43 BRT 2011
+
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[table, usenames, svgnames, dvipsnames, hyperref={pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true}]{beamer}
+\usepackage{beamerthemeshadow}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{amssymb}
+\usepackage{array}
+
+\usepackage[fixlanguage]{babelbib}
+
+%\PassOptionsToPackage{hyphens}{url}\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true]{hyperref} % links coloridos
+
+%\usepackage[all]{hypcap}                % soluciona o problema com o hyperref e capitulos
+\usepackage[square,sort,nonamebreak,comma]{natbib}  % citação bibliográfica alpha (alpha-ime.bst)
+\usepackage{setspace}                   % espaçamento flexível
+
+\graphicspath{{./images/}}
+
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+%\usepackage{subfigure}
+%\usepackage{multicol}
+%\usepackage{colortbl}
+
+% ---------------------------------------------------------------------------- %
+% Definições beamer
+% ---------------------------------------------------------------------------- %
+\usetheme{Rochester}
+%\usetheme{Luebeck}
+\usecolortheme{rose}
+
+% Algumas definições para o layout
+\setbeamerfont{frametitle}{size=\normalsize}
+\setbeamerfont{title}{size=\normalsize}
+\beamertemplatenavigationsymbolsempty
+
+% Podem ser utilizadas imagens no background
+%\setbeamercolor{frametitle}{bg=black}
+%\usebackgroundtemplate{\includegraphics[height=\paperheight]{figuras/back.jpg}}
+
+% Os simbolos de navegacao nao sao necessarios
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+
+%\setbeamertemplate{footline}[page number]{}
+%\setbeamertemplate{footline}[text line]{ \hfill {\insertframenumber}}
+
+% Indice para cada seo (aparece antes de cada section)
+\AtBeginSection[]
+{
+	\begin{frame}<handout:0>
+		\frametitle{\textbf{Agenda}}
+		\footnotesize{ \tableofcontents[currentsection,hideothersubsections] }
+	\end{frame}
+}
+
+% ---------------------------------------------------------------------------- %
+% Declarações
+% ---------------------------------------------------------------------------- %
+\DeclareGraphicsExtensions{.pdf,.jpg,.png} % compilamos apenas com pdflatex
+
+
+
+% semitransparente
+\newcommand{\semitransp}[2][35]{\color{fg!#1}#2}
+
+% \definecolor{myred}{rgb}{0.8, 0.3, 0.3}
+\definecolor{myblue}{rgb}{0.2, 0.2, 0.70196}
+
+\usepackage{framed} % utilizado para codigo fonte
+\definecolor{shadecolor}{named}{LightGray}
+
+% ---------------------------------------------------------------------------- %
+% TÃ¯Â¿Â½tulo
+% ---------------------------------------------------------------------------- %
+\title{\textbf{Tecnologias de Informação e Organizações}}
+
+\author[Marcelo de Rezende Martins]{\scriptsize
+    Marcelo de Rezende Martins\\
+    rezende.martins@gmail.com
+}
+
+\subtitle{Energia}
+
+\institute{\\[1.0mm]
+Instituto de Pesquisas Tecnológicas\\
+IPT}
+
+\date{{\tiny \today}}
+
+
+% ---------------------------------------------------------------------------- %
+\begin{document}
+% ---------------------------------------------------------------------------- %
+
+% ---------------------------------------------------------------------------- %
+% Primeira página: slide 0
+% ---------------------------------------------------------------------------- %
+
+{%\usebackgroundtemplate{}}
+\begin{frame}[plain]
+
+
+	\titlepage
+
+	\addtocounter{framenumber}{-1}
+\end{frame}
+}
+
+
+% ---------------------------------------------------------------------------- %
+% slide 1 >
+% ---------------------------------------------------------------------------- %
+%\setbeamertemplate{footline}{\hrule \MyLogo } %\hfill\includegraphics[height=1.2cm]{figuras/olho1.png}}
+%\setbeamertemplate{footline}{\hfill\includegraphics[height=1.2cm]{figuras/olho1.png}}
+\setbeamertemplate{navigation symbols}{\large {\insertframenumber}}
+
+% ---------------------------------------------------------------------------- %
+
+\begin{frame}[plain]
+\frametitle{}
+	\begin{block}{Artigos}
+		\begin{enumerate}
+			\item How LED Systems Will Drastically Improve Energy Efficiency \cite{hiebert:17}
+			\item Patching the Electric Grid \cite{layne:17}
+			\item Tesla to build world's biggest lithium ion battery in South Australia \cite{guardian:17}
+			\item Why We Still Don't Have Better Batteries \cite{martin:16}
+	\end{enumerate}
+	\end{block}
+\end{frame}
+
+% ---------------------------------------------------------------------------- %
+\begin{frame}
+\frametitle{\textbf{Agenda}}
+
+	\hspace*{+4.0em}
+	\footnotesize{ \tableofcontents }
+\end{frame}
+
+
+% ---------------------------------------------------------------------------- %
+\section{Uso de lâmpadas LED}
+% ---------------------------------------------------------------------------- %
+
+% ---------------------------------------------------------------------------- %
+\subsection{Uso da lâmpada LED nos EUA}
+% ---------------------------------------------------------------------------- %
+\begin{frame}
+\frametitle{Uso da lâmpada LED nos EUA}
+
+	\begin{center}
+		\hspace*{-0.6cm}
+		\includegraphics[width=1\textwidth]{adoption-usa-bulbs}\\
+		\tiny{\url{https://www.eia.gov/todayinenergy/detail.php?id=31112}}
+	\end{center}
+
+\end{frame}
+
+
+% ---------------------------------------------------------------------------- %
+\subsection{Vantagens da lâmpada LED}
+% ---------------------------------------------------------------------------- %
+
+\begin{frame}
+\frametitle{\textbf{Vantagens da lâmpada LED}}
+
+	\begin{center}
+		\hspace*{-0.6cm}
+		\includegraphics[width=1\textwidth]{led-bulbs-advantage}\\
+		\tiny{\url{https://www.fixr.com/comparisons/CFL-vs-LED-bulbs}}
+	\end{center}
+	
+\end{frame}
+
+\subsection{Invenção do LED}
+
+\begin{frame}
+\frametitle{\textbf{Invenção do LED} \cite{inmesol:16}}
+
+	\begin{description}
+		\item[Henry Joseph Round (1881-1966)] A primeira descrição sobre a eletroluminescência, o princípio básico dos LEDs, foi escrita por este científico britânico ao observar que certos semicondutores emitem luz quando uma corrente elétrica passa por eles. Round, um dos pioneiros do rádio, observou o fenómeno no momento em que aplicava tensão sobre semicondutores para tentar melhorar a amplificação dos sinais de rádio.
+
+	\end{description}
+	
+\end{frame}
+
+\subsection{Invenção do LED}
+
+\begin{frame}
+\frametitle{\textbf{Invenção do LED} \cite{inmesol:16}}
+
+	\begin{description}
+
+		\item [Oleg Vladimirovich Lósev (1903-1942)] Publicou a primeira pesquisa divulgada sobre os LEDs em 1927, primeiramente num jornal russo e, posteriormente, em vários meios britânicos e alemães. Lósev foi um cientista e investigador de muito talento, especializado em telecomunicações e eletrónica, que percebeu algo que já havia sido observado anteriormente por Henry Joseph Round: os semicondutores utilizados nos recetores de rádio emitiam luz ao serem atravessados por uma corrente elétrica. 
+
+	\end{description}
+	
+\end{frame}
+
+\subsection{Invenção do LED}
+
+\begin{frame}
+\frametitle{\textbf{Invenção do LED} \cite{inmesol:16}}
+
+	\begin{description}
+		
+		\item[Nick Holonyak (1928)] Durante o período em que trabalhou para a General Electric, este engenheiro norte-americano inventou em 1962 o primeiro LED em espetro visível. Um ano depois, declarou na Reader's Digest que as lâmpadas de LEDs substituiriam as incandescentes inventadas por Thomas Edison.
+	\end{description}
+
+	E por que só agora as lâmpadas LEDs tornaram-se populares?
+	
+\end{frame}
+
+\subsection{Invenção do LED}
+
+\begin{frame}
+\frametitle{\textbf{Invenção do LED} \cite{webb:14}}
+
+	\begin{center}
+		\hspace*{-0.6cm}
+		\includegraphics[width=1\textwidth]{blue-led-invention}\\
+		\tiny{Professores Akasaki, Amano and Nakamura}\\
+		\tiny{\url{http://www.bbc.com/news/science-environment-29518521}}
+	\end{center}
+\end{frame}
+
+\subsection{Invenção do LED}
+
+\begin{frame}
+\frametitle{\textbf{Invenção do LED} \cite{webb:14}}
+
+	\begin{itemize}
+		\item Gallium Nitride é o principal ingrediente
+		\item "\textit{Uso ótimo das lâmpadas LED pode reduzir o consumo de energia gasta em iluminação de 20\% para apenas 4\%}", segundo Dr Frances Saunders, President, Institute of Physics
+	\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------------- %
+\section{Vulnerabilidade da rede elétrica}
+% ---------------------------------------------------------------------------- %
+
+% ---------------------------------------------------------------------------- %
+\subsection{Vulnerabilidade da rede elétrica}
+% ---------------------------------------------------------------------------- %
+\begin{frame}
+\frametitle{Vulnerabilidade da rede elétrica \cite{zetter:16}}
+
+	\begin{itemize}
+		\item Ataque através de um malware que obteve o acesso direto a central de controle de energia na Ucrânia
+
+		\item Energia ficou fora do ar de 1 a 6 horas, mas após 2 meses de ataque, os centros de controle não estão operando 100\%
+
+		\item Rede de energia na Ucrânia é mais segura que os EUA, eles tem um backup manual do controle da rede elétrica
+
+		\item Eles reconfiguraram o gerador dos centros de controle para que os operadores ficassem no escuro também
+
+
+
+	\end{itemize}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------- %
+\subsection{Vulnerabilidade da rede elétrica}
+% ---------------------------------------------------------------------------- %
+\begin{frame}
+\frametitle{Vulnerabilidade da rede elétrica \cite{zetter:16}}
+
+	Eles reescreveram o firmware do serial-to-Ethernet converter
+
+	\begin{center}
+		\hspace*{-0.6cm}
+		\includegraphics[width=1\textwidth]{serial-to-ethernet-setup}\\
+		\tiny{\url{http://www.usconverters.com/index.php?main_page=page&id=70&chapter=0}}
+	\end{center}
+
+	O mesmo modelo de serial-to-Ethernet converter é usado nos EUA
+
+\end{frame}
+
+
+% ---------------------------------------------------------------------------- %
+\subsection{Solução sustentável}
+% ---------------------------------------------------------------------------- %
+\begin{frame}
+\frametitle{Solução sustentável \cite{kammen:15}}
+
+	\begin{center}
+		\hspace*{-0.6cm}
+		\includegraphics[width=1\textwidth]{sustainable-solutions}\\
+		\tiny{\url{http://www.usconverters.com/index.php?main_page=page&id=70&chapter=0}}
+	\end{center}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------- %
+\section{Alternativas a bateria de lítio}
+% ---------------------------------------------------------------------------- %
+
+% ---------------------------------------------------------------------------- %
+\subsection{Alternativas a bateria de lítio}
+% ---------------------------------------------------------------------------- %
+\begin{frame}
+\frametitle{Quem irá superar o lítio-ion? \cite{hall:17}}
+
+	\begin{itemize}
+		\item Células de combustível utilizando hidrogênio
+
+		\item Lítio-sulfur
+
+		\item Supercapacitores de grafeno
+
+		\item Bateria de fluxo redox
+
+		\item Bateria de alumínio-grafite
+
+		\item Bateria ultrafinas de lítio-ion
+
+		\item Solid state batteries
+
+
+
+	\end{itemize}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------- %
+\section{Maior bateria de lítio do mundo}
+% ---------------------------------------------------------------------------- %
+
+% ---------------------------------------------------------------------------- %
+\subsection{Maior bateria de lítio do mundo}
+% ---------------------------------------------------------------------------- %
+\begin{frame}
+\frametitle{Tesla cumpre contrato \cite{etherington:17}}
+
+	\begin{itemize}
+		\item Repetidos blecautes no sul da Austrália
+
+		\item Sul da Austrália é responsável por \cite{wikienergy:17}:
+
+		\begin{itemize}
+			\item 56\% da energia eólica produzida na Austrália
+
+			\item 30\% da energia solar
+
+			\item 90\% da energia geotérmica
+		\end{itemize}
+
+	\end{itemize}
+
+\end{frame}
+
+
+% ---------------------------------------------------------------------------- %
+{%\usebackgroundtemplate{}}
+\begin{frame}[plain]
+
+	\titlepage
+
+	\addtocounter{framenumber}{-1}
+\end{frame}
+}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\begin{frame}[allowframebreaks]
+\frametitle{Referências}
+\singlespacing   % espaçamento simples
+\bibliographystyle{alpha-ime}% citação bibliográfica alpha
+\bibliography{references}  % associado ao arquivo: 'bibliografia.bib'
+\end{frame}
+
+\end{document}
