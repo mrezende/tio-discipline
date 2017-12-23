@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+
+\usepackage{amsmath}
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage[fixlanguage]{babelbib}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+
+\PassOptionsToPackage{hyphens}{url}\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true]{hyperref} % links coloridos
+
+\usepackage[all]{hypcap}                % soluciona o problema com o hyperref e capitulos
+\usepackage[square,sort,nonamebreak,comma]{natbib}  % citaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o bibliogrÃƒÆ’Ã‚Â¡fica alpha (alpha-ime.bst)
+\usepackage{setspace}                   % espaÃƒÆ’Ã‚Â§amento flexÃƒÆ’Ã‚Â­vel
+
+\graphicspath{{./images/}}
+
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{flushright} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{50pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{Subutilização dos nossos recursos hídricos}\\ % Title
+} % Subtitle
+
+\author{\textsc{Marcelo de Rezende Martins} % Author
+\\{\textit{IPT}}} % Institution
+
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+
+\section*{Visão Pessoal}
+
+
+O Brasil, São Paulo tem um vasto recurso hídrico. Tem uma enorme reserva de água doce. Porém boa parte dos nossos recursos hídricos na grande São Paulo, como os rios Pinheiros, Tietê, Tamanduateí estão poluídos. Segundo Luis Antonio Bittar Venturi, pesquisador da USP, somente a represa Billings teria água suficiente para abastecer mais de 4 milhões de pessoas, mas é subutilizada devido a poluição \cite{naoe:15}. E devido a esta subutilização e má gestão dos recursos hídricos, milhares de pessoas em São Paulo sofreram em 2014 com o racionamento de água. Neste ano de 2014 choveu 1216,8mm em São Paulo. Para comparar,  Israel tem uma média pluviométrica de 430mm por ano, isto representa 1/3 do que choveu em São Paulo em 2014 \cite{bank:17}.
+
+É necessário repensar o consumo e uso dos recursos hídricos pela população. Novas construções devem levar em consideração a diferença entre água potável e água para uso em limpeza de espaços públicos, jardim e banheiro. A mesma água usada na descarga do banheiro é usada para lavar frutas e verduras \cite{carvalho:14}.
+
+Segundo o pesquisador Luis Bittar, um programa de cisternas no Nordeste usa apenas água da chuva para sustentar, com uma cisterna de 16 000 litros, uma família de cinco pessoas por oito meses. É inimaginável, segundo Bittar, pensar em "falta de água" em São Paulo que é banhado por vários rios e com a quantidade de milimetros de chuva que ocorrem por ano \cite{naoe:15}.
+
+Há iniciativas de prédios sustentáveis com selo verde que utiliza água da chuva para limpeza de áreas comuns, uso nos sanitários \cite{haydee:16}. É necessário democratizar o acesso, expandir as iniciativas para a população. A descentralização da captação da água da chuva pode ser uma solução para diminuir a dependência dos reservatórios \cite{bernardes:17}. 
+
+Outro problema é o desperdício na distribuição de água. Isto representa 40\% de desperdício \cite{senado:15}. Uma solução seria utilizar IOT para detectar vazamentos em tempo real e fazer a manutenção com uma maior eficiência. Uso de Big Data para analisar onde há pontos de maiores desperdícios. Isto ajudaria na manutenção \cite{parikh:16}.
+
+Aumentar a eficiência na distribuição requer uma manutenção contínua, investimento de empresas privadas e governos e os frutos serão colhidos pela geração futura. O planeta Terra agradece.
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\singlespacing   % espacamento simples
+\bibliographystyle{alpha-ime}% citacao bibliografica alpha
+\bibliography{references}  % associado ao arquivo: 'bibliografia.bib'
+
+\end{document}
